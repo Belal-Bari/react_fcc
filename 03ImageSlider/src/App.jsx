@@ -48,7 +48,7 @@ function App() {
     }
 
     return(
-      <div  className='flex justify-center py-11'>
+      <div  className='flex justify-center py-11 bg-transparent'>
         <button
         className='text-slate-500 text-4xl mr-4'
         onClick={handleClickLeft}
@@ -69,12 +69,12 @@ function App() {
   
 
   return (
-    <>
-      <h1 className="text-3xl text-blue-600 text-center py-4 font-bold underline shadow-md">
+    <div className='bg-gradient-to-r from-blue-300 to-indigo-500 h-screen'>
+      <h1 className="text-3xl text-slate-100 text-center py-4 font-bold underline shadow-md bg-transparent">
         Image Slider
       </h1>
       <ImageSlider />
-    </>
+    </div>
   )
 }
 
