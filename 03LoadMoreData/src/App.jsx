@@ -53,10 +53,11 @@ function App() {
           )) : null
         }
       </div>
-      <div>
+      <div style={{dislay:'flex',alignItems: 'center', width:'100%',border:'1px solid black'}}>
         <button
         onClick={()=> setCount(count + 1)}
         disabled={disabled}
+        style={{margin:'auto'}}
         >{disabled ? 'You have reached 100 products' : 'Load More Products'}</button>
       </div>
       
