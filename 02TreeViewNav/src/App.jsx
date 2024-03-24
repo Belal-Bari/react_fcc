@@ -1,10 +1,11 @@
-import { useState } from 'react'
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import MenuList from './components/MenuList'
 import menus from './data'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
   const TreeView = ({menu = []}) => {
 
     return (

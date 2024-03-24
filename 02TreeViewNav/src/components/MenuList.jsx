@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import MenuItem from "./MenuItem";
 
 export default function MenuList({list = []}) {
