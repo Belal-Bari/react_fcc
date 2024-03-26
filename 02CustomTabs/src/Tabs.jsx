@@ -13,7 +13,7 @@ function Tabs({tabsContent, onChange}) {
     <div style={{width:'100vw',display:'grid'}}>
         <div style={{display:'flex',justifyContent:'center'}}>
             {
-                tabsContent.map((item, index) => <div onClick={()=>handleOnClick(index)} key={item.label} style={{padding:'30px 20px',fontSize:'18px',fontWeight:'bold',border:'solid',background:'purple',color:'white'}} >{item.label}</div>)
+                tabsContent.map((item, index) => <div onClick={()=>handleOnClick(index)} key={item.label} style={{padding:'25px 20px',fontSize:'18px',fontWeight:'bold',border:'solid',background:'purple',color:'white'}} >{item.label}</div>)
             }
         </div>
         <div style={{display:'flex',justifyContent:'center',padding:'30px 0px'}}>
