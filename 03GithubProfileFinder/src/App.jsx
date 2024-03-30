@@ -41,7 +41,7 @@ function App() {
       {loading ? <h3>Loading Data...</h3> : 
         <div style={{display:'grid',rowGap:'30px',justifyContent:'center', textAlign:'center',border:'1px solid black',borderRadius:'10px',width:'50vw',padding:'20px 0px'}} >
           <img  src={userData ? userData.avatar_url: ''} width='200px' />
-          <a href={userData ? userData.html_url : ''} target='_blank'>{userData ? userData.login : ''}</a>
+          <a href={userData ? userData.html_url : ''} target='_blank'>{userData ? userData.name : ''}</a>
           <p>User joined on {userData ? `${new Date(userData.created_at).getDate()} ${new Date(userData.created_at).getMonth()} ${new Date(userData.created_at).getFullYear()}` : ''}</p>
           <p>Public repos {userData ? userData.public_repos : ''}</p>
           <p>Followers {userData ? userData.followers : ''}</p>
