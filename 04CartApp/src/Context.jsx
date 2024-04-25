@@ -26,12 +26,43 @@ const AppProvider = ({ children }) => {
     dispatch({ type:'REMOVE',payload: id })
   }
 
+  const increase = (id) => {
+    dispatch({ type: 'INCREASE', payload: id})
+  }
+
+  const decrease = (id) => {
+    dispatch({ type: 'DECREASE', payload: id})
+  }
+
+  const fetchData = async() => {
+    try {
+      dispatch({ type:'LOADING' })
+      const response = await fetch(url, {mode: 'no-cors'})
+      const tempCart = await response.json()
+      console.log(tempCart)
+      dispatch({ type:'DISPLAY_ITEMS', payload: tempCart })  
+    } catch (error) {
+        console.log(error.message)
+    }
+    
+  }
+
+  useEffect(()=>{
+    //fetchData()
+  },[])
+
+  useEffect(()=>{
+    dispatch({ type: 'GET_TOTAL'})
+  },[state.cart])
+
   return (
     <AppContext.Provider
       value={{
         ...state,
         clearCart,
         remove,
+        increase,
+        decrease
       }}
     >
       {children}
